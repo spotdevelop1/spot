@@ -1,0 +1,240 @@
+            /*ESTILOS FORMULARIO RECHARGE.BLADE.PHP*/
+
+/* Clase personalizada similar a col-lg-7 de Bootstrap */
+.custom-col-lg-7 {
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 58.333333%;
+    margin-top: 150px; /* Pruebas de medida */
+
+    /* Responsividad */
+    @media (max-width: 700px) {
+        margin-top: 50px; /* Cambiar margen superior en dispositivos más pequeños */
+    }
+}
+
+/* Media query para ajustar el diseño en tamaños de pantalla más pequeños */
+@media (max-width: 992px) {
+    .custom-col-lg-7 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/* Estilos para el contenedor de recarga con fondos y estilos específicos */
+.color-pg-recarga {
+    background-color: rgba(10, 79, 151, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+    margin-top: 50px; /* Pruebas de margen */
+    margin-bottom: 0;
+}
+
+
+/* Estilos para los controles de formulario dentro del contenedor de recarga */
+.form-user-recharge .form-user-control {
+    background-color: rgba(255, 255, 255, 0.5); 
+    color: #333;
+    border: 1px solid #ddd; 
+    padding: 15px; 
+    margin-bottom: 1rem;
+    width: 100%; 
+    max-width: 450px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilos para los botones dentro del contenedor de recarga */
+.form-user-recharge .btn {
+    background-color: rgba(255, 193, 7, 0.5); /* Color de fondo del botón con transparencia */
+    color: #333; /* Color de texto del botón */
+    border: none; /* Sin bordes */
+    padding: 10px 20px; /* Espaciado interno ajustado */
+    margin-top: 1rem; /* Espacio arriba del botón */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera para darle profundidad */
+    width: auto; /* Ancho automático */
+    max-width: 250px; /* Ancho máximo más pequeño */
+    font-size: 1.2rem; /* Tamaño de fuente más grande */
+    display: block; /* Para permitir margin auto */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Ajustes para mensajes de error para que se centren y tengan la transparencia */
+.alert-danger {
+    background-color: rgba(255, 0, 0, 0.3); 
+    color: white;
+    border: none;
+    text-align: center;
+    width: 80%; 
+    margin: 10px auto;
+    display: block; 
+}
+
+/*FINAL ESTILOS FORMULARIO RECHARGE.BLADE.PHP*/
+
+/*ESTILOS FORMULARIO RESULT.BLADE.PHP*/
+.imagen-fondo {
+    background: url(../images/pago.jpg) center center no-repeat;
+    background-size: cover;
+  }
+
+.user-info-section {
+    position: relative;
+    padding-top: calc(100px + 20px); 
+    min-height: calc(100vh - 100px); 
+    background-image: url('../images/pago.jpg');
+    background-size: cover;
+    background-position: center center;
+    z-index: 0;
+}
+
+.user-result-card {
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.user-result-card .card-title {
+    color: #0a4f97;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card .card-body {
+    background: #f8f9fa;
+}
+
+/* Estilos para el contenedor de la tabla */
+.color-pg-recarga {
+    background-color: rgba(10, 79, 151, 0.5); 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px; 
+    margin-top: 50px; 
+    margin-bottom: 0; 
+}
+
+/* Estilos para la tabla */
+.custom-table {
+    width: 100%; 
+    margin-top: 20px; 
+    color: white; 
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.custom-table th,
+.custom-table td {
+    text-align: center;
+    border: 1px solid white; 
+    border-bottom: none;
+    border-top: none;
+}
+
+.custom-table thead th {
+    border-bottom: 1px solid white; 
+}
+
+.custom-table tbody tr:last-child td {
+    border-bottom: 1px solid white; 
+}
+
+/* Estilos para el botón 'Pagar Ahora' */
+.btn-pagar-ahora {
+    background-color: #28a745;
+    color: white; 
+    padding: 10px 20px; 
+    margin-top: 20px;
+    border-radius: 5px; 
+    text-align: center; 
+    display: block; 
+    width: auto; 
+    max-width: 250px; 
+    font-size: 1.2rem; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    margin-left: auto; 
+    margin-right: auto; 
+}
+/* Animación Orbit */
+/* Establece el color primario para la animación */
+:root {
+    --primary: #3498db; /* Azul, o el color que prefieras */
+}
+
+/* Contenedor base del formulario */
+.color-pg-recarga.form-user-recharge {
+    position: relative; /* Necesario para el posicionamiento absoluto del contenedor de animación */
+}
+
+/* Contenedor de la animación de carga */
+.dots-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+    display: none; /* Oculto por defecto */
+}
+
+/* Estilos para los puntos individuales de la animación */
+.dots-container .dot {
+    background-color: var(--primary);
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    /* Animación que hace que el punto se expanda y contraiga */
+    animation: pulse 1.2s infinite ease-in-out alternate;
+}
+
+/* Crea la animación con diferentes retrasos para cada punto */
+.dots-container .dot:nth-child(1) { animation-delay: -1.1s; }
+.dots-container .dot:nth-child(2) { animation-delay: -1.0s; }
+.dots-container .dot:nth-child(3) { animation-delay: -0.9s; }
+.dots-container .dot:nth-child(4) { animation-delay: -0.8s; }
+.dots-container .dot:nth-child(5) { animation-delay: -0.7s; }
+
+/* Keyframes para la animación 'pulse' */
+@keyframes pulse {
+    0%, 100% { transform: scale(0.75); }
+    50% { transform: scale(1); }
+}
+
+
+

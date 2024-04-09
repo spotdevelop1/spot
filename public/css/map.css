@@ -1,0 +1,235 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.header-area {
+    z-index: 1050; /* El z-index estándar de Bootstrap para los navbars */
+    position: relative; /* Necesario para que el z-index funcione */
+}
+
+#search-container {
+    position: absolute;
+    top: 80px; /* Debe ser igual a la altura del navbar */
+    left: 0;
+    width: 350px; /* Ancho más apropiado buscador*/
+    bottom: 0;
+    background-color: #007bff;
+    z-index: 999; /* Menor que el z-index del navbar para que quede detrás */
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto; /* Permite el desplazamiento si el contenido es más largo */
+    box-shadow: 6px 0px 8px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidad */
+}
+
+/*PARTE LATERAL MAPA DE COLORES*/
+/* Estilo general para la leyenda de cobertura */
+.map-coverage-legend {
+    margin-top: 20px;
+    background: #ffffff; /* Fondo blanco */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+    border-radius: 12px; /* Bordes redondeados más suaves */
+    padding: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente moderna */
+    transition: box-shadow 0.3s ease; /* Suaviza la transición de la sombra */
+}
+
+/* Título de la leyenda */
+.legend-title {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.25rem; /* Tamaño de fuente más grande para el título */
+    color: #333; /* Color de texto oscuro para contraste */
+}
+
+/* Estilos para la lista de cobertura */
+.coverage-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.coverage-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px; /* Más espacio entre elementos */
+    transition: transform 0.3s ease; /* Transición suave para efectos de hover */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar interactividad */
+}
+
+.coverage-item:hover .color-indicator,
+.coverage-item:hover .color-description {
+    transform: scale(1.2); /* Aumenta el tamaño al pasar el ratón */
+    font-weight: bold; /* Hace el texto más grueso */
+}
+
+/* Indicadores de color */
+.color-indicator {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.2); /* Sombra interna para dar profundidad */
+    transition: transform 0.3s ease; /* Transición suave para el hover */
+}
+
+.coverage-item:hover .color-description {
+    transform: scale(1.2); /* Aumenta el tamaño al pasar el ratón */
+    font-weight: bold; /* Hace el texto más grueso */
+    margin-left: 20px; /* Añade un margen extra cuando el elemento se agranda */
+}
+
+.color-description {
+    flex-grow: 1;
+    font-size: 1rem; /* Tamaño uniforme para la descripción */
+    transition: transform 0.3s ease, margin-left 0.3s ease; /* Transición suave para el hover y el margen */
+    display: block; /* Asegura que el elemento se trate como un bloque */
+    margin-left: 5px; /* Margen inicial */
+}
+
+/* Colores específicos para cada indicador */
+.low {
+    background-color: #ff726f;
+}
+
+.moderate {
+    background-color: #ffae42;
+}
+
+.decent {
+    background-color: #fffd71;
+}
+
+.good {
+    background-color: #66bf39;
+}
+/*------------------------------------------------------------------------------------------*/
+/*PARA LOS MENSAJES*/
+/* Animación */
+@keyframes jump {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Estilos comunes para mensajes */
+.message {
+    font-weight: bold;
+    padding: 20px; /* Agrega un poco de espacio alrededor del texto */
+    border-radius: 5px; /* Bordes redondeados para el div */
+    animation: jump 1.5s infinite; /* Aplica la animación de saltos */
+}
+  
+  /* Estilos para cobertura */
+  .inside-coverage {
+    background-color: rgba(0, 255, 0, 0.3); /* Verde con opacidad */
+    color: green;
+    font-weight: bold;
+    padding: 20px; /* Agrega un poco de espacio alrededor del texto */
+    border-radius: 5px; /* Bordes redondeados para el div */
+  }
+  
+  .outside-coverage {
+    background-color: rgba(255, 0, 0, 0.3); /* Rojo con opacidad */
+    color: red;
+    font-weight: bold;
+    padding: 20px; /* Agrega un poco de espacio alrededor del texto */
+    border-radius: 5px; /* Bordes redondeados para el div */
+  }
+  .additional-text {
+    color: black; /* Establece el color del texto a blanco */
+}
+  
+  /*------------------------------------------------------------------------------------------*/
+
+/*PARA LAS PARTICULAS*/
+#particles-js {
+ position: absolute;
+    top: 0; /* Alineado con la parte superior del contenedor */
+    left: 0; /* Alineado con el lado izquierdo del contenedor */
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    height: 100%; /* Ocupa todo el alto del contenedor */
+    z-index: 0; /* Detrás de los elementos de la interfaz de usuario */
+    pointer-events: none; /* Ignora los eventos del ratón */
+    overflow-y: hidden; /* Esto ocultará la barra de desplazamiento vertical */
+}
+  
+  /*------------------------------------------------------------------------------------------*/
+#map-container {
+    position: absolute;
+    top: 80px; /* Debe ser igual a la altura del navbar */
+    left: 330px; /* Ancho del contenedor de búsqueda + padding */
+    right: 0; 
+    bottom: 0;
+}
+
+#map {
+    height: 100%;
+    width: 100%; 
+}
+
+    /* PARA DISPOSITIVOS MOVILES */
+@media (max-width: 768px) {
+    #search-container {
+        position: relative;
+        top: 80px; /* Alineado con la altura del navbar */
+        left: 0;
+        right: 0;
+        width: 100%; 
+        max-width: 650px; 
+        height: 150px; 
+        padding: 10px; 
+        box-sizing: border-box;
+        overflow-y: auto;
+        z-index: 999; 
+        background-color: #007bff; 
+    }
+
+    #map-container {
+        position: absolute;
+        top: 230px; 
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    #map {
+        height: calc(100vh - 230px);
+        width: 100%;
+    }
+    .map-coverage-legend {
+        /* Estilos para la leyenda en dispositivos móviles */
+        position: fixed; /* La leyenda se fija en la parte inferior de la pantalla */
+        bottom: 0;
+        left: 0;
+        width: 100%; /* La leyenda se extiende a lo ancho de la pantalla */
+        border-radius: 0; /* Se elimina el borde redondeado para que se ajuste a los bordes de la pantalla */
+        background: rgba(0, 0, 0, 0.8); /* Fondo oscuro para alto contraste */
+        box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.3); /* Sombra para dar sensación de elevación */
+        z-index: 999; /* Asegurarse de que la leyenda se muestre sobre otros elementos */
+    }
+
+    .coverage-list {
+        display: flex; /* Alineación horizontal de los elementos de la lista */
+        justify-content: center; /* Centrar los elementos en la lista */
+        padding: 4px; /* Espacio interior */        
+        color: white;
+
+    }
+
+    .coverage-item {
+        flex: 1; /* Cada elemento de la leyenda toma un espacio equitativo */
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Centrar el contenido de cada elemento */
+    }
+    .color-description {
+        margin-left: 4px; /* Espacio entre el indicador de color y su descripción */
+        color: white;
+        padding-right: 10px;
+    }
+
+}

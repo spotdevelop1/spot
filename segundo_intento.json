@@ -1,0 +1,26 @@
+{
+  "type": "Compass Connections",
+  "version": {
+    "$numberInt": "1"
+  },
+  "connections": [
+    {
+      "id": "d6c91f67-8fa6-4434-be04-7e30eebee69e",
+      "lastUsed": {
+        "$date": {
+          "$numberLong": "1709563538955"
+        }
+      },
+      "favorite": {
+        "name": "SpotUno",
+        "color": "color3"
+      },
+      "connectionOptions": {
+        "connectionString": "mongodb://SpotAdmin:Sp0t1noU%24ers@127.0.0.1:27017/?authSource=wisphubdb",
+        "oidc": {
+          "serializedState": "eyJvaWRjUGx1Z2luU3RhdGVWZXJzaW9uIjowLCJzdGF0ZSI6W119"
+        }
+      }
+    }
+  ]
+}
