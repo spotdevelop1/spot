@@ -9,20 +9,11 @@ use Illuminate\Support\Facades\Session; // Importar el Facade de Session
 
 class PaymentController extends Controller
 {
-    public function __construct()
-    {
-        // Se inicializa Openpay con las credenciales de tu cuenta.
-        /* 
-        $this->openpay = Openpay::getInstance(env('OPENPAY_ID'), env('OPENPAY_PRIVATE_API_KEY'));
-        Openpay::setProductionMode(env('OPENPAY_PRODUCTION_MODE') === 'true');*/
-        // Se inicializa Openpay con las credenciales de tu cuenta de forma directa.
-        
-    }
-
     public function createCharge(Request $request)
     {
-        
-        Openpay::setProductionMode(true); // Cambia a false si estás probando en modo sandbox.
+        // Inicializar OpenPay con la ID y la clave privada directamente desde el .env y el modo de producción forzado a true.
+        $openpay = Openpay::getInstance(env('OPENPAY_ID_S'), env('OPENPAY_PRIVATE_API_KEY'));
+        Openpay::setProductionMode(env('OPENPAY_PRODUCTION_MODE') === 'true');
 
         Log::info('Iniciando el proceso de createCharge.');
 
